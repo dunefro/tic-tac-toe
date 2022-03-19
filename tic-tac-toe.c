@@ -31,6 +31,10 @@ int verifyMove(char *arr, int grid) {
     return 1; // something wrong
 }
 
+int checkVictory() {
+    return 1;
+}
+
 int main() {
     printf("Player 1 (X) - Player 2 (O)\n");
     printf("Doing a toss: ");
@@ -58,6 +62,9 @@ int main() {
             return 1;
         }
         arr[grid] = currentPlayerSymbol;
+        if (checkVictory) {
+            break;
+        }
     }
     return 0;
 }
